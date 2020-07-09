@@ -35,7 +35,13 @@
             fname = patient.name[0].given.join(' ');
             lname = patient.name[0].family.join(' ');
           }
-
+          //const dsvIdentifierSystemName = 'urn:oid:2.16.840.1.113883.3.787.0.0';
+//           for(let i = 0; i < patient.identifier.length; i++) {
+//             if (patient.identifier[i].system === dsvIdentifierSystemName) {
+//               p.dsvPatientId = patient.identifier[i].value;
+//               break;
+//             } 
+//           }
           var height = byCodes('8302-2');
           var systolicbp = getBloodPressureValue(byCodes('55284-4'),'8480-6');
           var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
